@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="noemi's portfolio" property="og:title">
+    <title>nyoemii = it/its</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<header>
+    <section class="navbar">
+        <nav>
+            <ul>
+                <li><a href="index.html">main</a></li>
+                <li><b><a href="portfolio.html">portfolio</a></b></li>
+                <li><a href="aboutme.html">about me</a></li>
+            </ul>
+        </nav>
+    </section>
+    <hr class="hr1">
+</header>
+
+<body>
+    <div class="content">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h3>Projects</h3>
+            <ul>
+                <li><a href="#project-list">Project List</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <section class="title">
+                <h1><a href="portfolio.html">> my personal projects</a></h1>
+            </section>
+            <hr class="hr2">
+            <section class="main" id="project-list">
+                <h2><a class="no-decor" href="portfolio.html#project-list"># project list</a></h2>
+                <div class="projects-grid">
+                    <div class="project-box">
+                        <h3><a href="https://github.com/nyoemii/MysticalAgricultureCalculator" target="_blank">Mystical
+                                Agriculture Calculator</a></h3>
+                        <p>My self-made CLI tool made to calculate <a
+                                href="https://www.curseforge.com/minecraft/mc-mods/mystical-agriculture">Mystical
+                                Agriculture</a> essences for Minecraft mod automation.</p>
+                        <div class="project-tech">Windows • C#</div>
+                    </div>
+
+                    <div class="project-box">
+                        <h3><a href="https://github.com/nyoemii/CatgirlFinder" target="_blank">CatgirlFinder</a></h3>
+                        <p>A small iOS app I made with help from <a href="https://github.com/llsc12">llsc12</a> which
+                            just fetches catgirl pictures xd</p>
+                        <div class="project-tech">iOS • Swift</div>
+                    </div>
+
+                    <div class="project-box">
+                        <h3><a href="https://github.com/nyoemii/nyoetools" target="_blank">nyoetools</a></h3>
+                        <p>Discord userapp that has some neat features for me and friends :3</p>
+                        <div class="project-tech">Discord • Python</div>
+                    </div>
+
+                    <div class="project-box">
+                        <h3><a href="https://songs.nyoemii.dev" target="_blank">Navidrome Music Instance</a></h3>
+                        <p>My personal Navidrome instance, where I host some of my music ^_^</p>
+                        <div class="project-tech">Music Streaming • Self-Hosted</div>
+                    </div>
+
+                    <div class="project-box">
+                        <h3><a href="https://i.nyoemii.dev" target="_blank">Personal File Browser</a></h3>
+                        <p>& Uploader, made with help from Claude :) (i know the css and a bit of the backend is
+                            vibecoded)</p>
+                        <div class="project-tech">Online File Browser • Python/HTML</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/cursor-trail.js"></script>
+    <script>
+        // Highlight active sidebar link based on scroll position
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section.main[id], section.main h2[id]');
+            const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href').substring(1);
+                if (href === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll to section
+        document.querySelectorAll('.sidebar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+<footer>
+    <hr class="hr3">
+    <p>&copy;2025 nyoemii -- made with love by me :3 </p>
+</footer>
+
+</html>

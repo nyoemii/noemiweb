@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="noemis puppyhouse :3" property="og:title">
+    <meta content="stupid puppygirl coding thing" property="og:description">
+    <meta content="https://nyoemii.dev" property="og:url">
+    <meta content="https://nyoemii.dev/media/img/pfp.jpg" property="og:image">
+    <meta content="#4db9a7" data-react-helmet="true" name="theme-color">
+    <title>nyoemii = it/its</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/prism.css">
+</head>
+<header>
+    <section class="navbar">
+        <nav>
+            <ul>
+                <li><a href="index.html">main</a></li>
+                <li><a href="portfolio.html">portfolio</a></li>
+                <li><b><a href="aboutme.html">about me</a></b></li>
+            </ul>
+        </nav>
+    </section>
+    <hr class="hr1">
+</header>
+
+<body>
+    <div class="content">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h3>Entries</h3>
+            <ul>
+                <li><a href="#1st-entry">1st Entry</a></li>
+                <li><a href="#about-me">About Myself</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <section class="title">
+                <h1><a href="aboutme.html">> about me</a></h1>
+            </section>
+            <hr class="hr2">
+            <section class="main" id="1st-entry">
+                <h2><a class="no-decor" href="aboutme.html#1st-entry"># 1st entry - 23.09.2025</a></h2>
+                <p>
+                    soo.. today was my birthday. it was definitely really fun, but it sadly turned depressive at the
+                    middle of the day. <br>
+                    one of my best friends, one that i've known my entire life, sadly told me, that he can't come to my
+                    birthday party at the weekend. <br>
+                    this honestly made me really sad and depressed, my emotions confuse me at the moment, probably due
+                    to my <a href="https://en.wikipedia.org/wiki/Feminizing_hormone_therapy">hrt</a>. <br>
+                    <br>
+                    to be honest, there's not much more for me to write, as today has just been weird but also fun. <br>
+                    one of my close friends had offered to play some games with me and talk to me, which honestly made
+                    me really happy :) <br>
+                    if ur reading this december, ily and i'm truly grateful to have you as my friend. <br>
+                    i also have my partner over at the moment, and i couldn't be happier. <br>
+                    <br>
+                    peace o/
+                </p>
+            </section>
+            <section class="main" id="about-me">
+                <h2><a class="no-decor" href="aboutme.html#about-me"># about myself & why i behave like i do</a></h2>
+                <p>
+                    my name is Noemi. i've been born on the 23rd of September in 2004. i never really thought about
+                    writing something on this silly website <br>
+                    but i feel like doing it so that anyone that gets to find out about me has a slight idea of what i
+                    am. <br>
+                    <br>
+                    ever since growing up i've constantly been bullied in any school i went to and always had issues
+                    with myself. <br>
+                    i still dont know to this day what i did in my life to deserve getting bullied for about 10
+                    consecutive years. <br>
+                    since i've been around 12 or 13 years old i've had beginning thoughts of how my life would've went
+                    if i was born a girl. <br>
+                    <br>
+                    well, that's where i am now. after around 6 years i decided to get psycho-therapy and it led to
+                    being who i am today. <br>
+                    even though it helped i was still feeling like i'm missing something. and that something was getting
+                    <a href="https://en.wikipedia.org/wiki/Feminizing_hormone_therapy">hrt</a>. <br>
+                    <br>
+                    at around 18 or 19 years old i got my first experiences with <a
+                        href="https://en.wikipedia.org/wiki/Polyamory">polyamorous</a> relationships, which have kind of
+                    made me into what i am today. <br>
+                    that experience has formed me into a girl that doesn't always behave like a girl. infact, i react to
+                    clicker noises and behave like a puppy towards my partner. <br>
+                    you could basically say, that i was "puppy brainwashed". and yes, it's still sticking to me to this
+                    day. but honestly? i can't complain :) <br>
+                    i'm getting a lot of attention and affection by people around me (that know about this) and i'm glad
+                    to be able to express myself in this kind of way towards my partner and friends. <br>
+                    <br>
+                    i don't really have anything to say for now, other than that i'm happy to finally having finished
+                    school at almost 21 years old. <br>
+                    i would love to mention my friends and my partner here, but i doubt they would want to be included
+                    on this silly small site of mine xd <br>
+                    this is all i have to say for now. if you have read up to this part maybe shoot me a dm from time to
+                    time to check in on me, as i might be a bit sad or depressed. <br>
+                    <br>
+                    my username on discord is nyoemii, but you can also find me on <a
+                        href="https://twitter.com/nyoemiii">twitter</a> or <a
+                        href="https://github.com/nyoemii">github</a> <br>
+                    PEACE OUT!
+                </p>
+            </section>
+        </div>
+    </div>
+    <script src="js/cursor-trail.js"></script>
+    <script>
+        // Highlight active sidebar link based on scroll position
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section.main[id], section.main h2[id]');
+            const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href').substring(1);
+                if (href === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll to section
+        document.querySelectorAll('.sidebar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+<footer>
+    <hr class="hr3">
+    <p>&copy;2025 nyoemii -- made with love by me :3 </p>
+</footer>
+
+</html>

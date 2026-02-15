@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="noemis puppyhouse :3" property="og:title">
+    <meta content="stupid puppygirl coding thing" property="og:description">
+    <meta content="https://nyoemii.dev" property="og:url">
+    <meta content="https://nyoemii.dev/media/img/pfp.jpg" property="og:image">
+    <meta content="#4db9a7" data-react-helmet="true" name="theme-color">
+    <title>nyoemii = it/its</title>
+    <link rel="stylesheet" href="./css/main.css?v=3">
+    <link rel="stylesheet" href="./css/prism.css">
+</head>
+<header>
+    <section class="navbar">
+        <nav>
+            <ul>
+                <li><b><a href="index.html">main</a></b></li>
+                <li><a href="portfolio.html">portfolio</a></li>
+                <li><a href="aboutme.html">about me</a></li>
+            </ul>
+        </nav>
+    </section>
+    <hr class="hr1">
+</header>
+
+<body>
+    <div class="content">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#contact-me">Contact</a></li>
+                <li><a href="#discord">Discord</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <section class="title">
+                <h1><img class="title-img" src="media/img/pfp.jpg" alt="puppyy :3" width="80px" title=":3"><a
+                        href="index.html"> nyoemii </a><a href="https://github.com/nyoemii" target="_blank"><img
+                            class="icon" src="media/ico/github.png" alt="github icon"><img class="icon"
+                            src="media/ico/verifiedtrans.png" alt="trans"></a></h1>
+            </section>
+            <hr class="hr2">
+            <section class="main" id="about-me">
+                <h2><a class="no-decor" href="index.html#about-me"># about me</a></h2>
+                <p>haiiii -w-</p>
+                <p>my name is noemi and i'm a <span id="age">&hellip;</span> year old 🏳️‍⚧️ girl from germany who also
+                    loves doing <a href="portfolio.html">silly stuff :3</a>.</p>
+                <p>i finished school on the 9th of july 2025 ^w^</p>
+                <p>in the process of learning python only for now, possibly picking up other languages some day</p>
+                <p>i used claude.ai to generate my css for me because i literally cba to bother with css</p>
+            </section>
+            <section class="main" id="contact-me">
+                <h2><a class="no-decor" href="index.html#contact-me"># how to contact me</a></h2>
+                <p>if you desperately need to contact me for something important, please do over this mail:</p>
+                <ul>
+                    <li><a href="mailto:me@nyoemii.dev">me(at)nyoemii(dot)dev</a></li>
+                </ul>
+                <p>or if you haven't gotten a reply since some days, contact me on discord:</p>
+                <ul>
+                    <li>nyoemii</li>
+                </ul>
+            </section>
+            <section class="main" id="discord">
+                <h2><a class="no-decor" href="index.html#discord"># discord status</a></h2>
+                <div id="discord-presence"></div>
+            </section>
+            <section class="main" id="links">
+                <h2><a class="no-decor" href="index.html#links"># links of my friends</a></h2>
+                <pre><code class="language-html">&lt;!-- if you want to hotlink my button, feel free:--&gt;
+&lt;a href="https://nyoemii.dev"&gt;
+&lt;img src="https://nyoemii.dev/media/img/button.png" alt="noemi's puppyhouse" /&gt;
+&lt;/a&gt;</code></pre>
+                <a href="https://circulars.dev"><img src="https://circulars.dev/circular-88x31.gif"></a>
+                <a href="https://cdstx4.xyz/"><img src="https://cdstx4.xyz/badge/stx4_88x31.png"></a>
+                <a href="https://nekohaxx.dev/"><img src="https://nyoemii.dev/media/img/88x31.png"></a>
+                <a href="https://mugman.tech"><img src="https://nyoemii.dev/media/img/mugman.png" /></a>
+                <a href="https://c0de.wtf"><img src="https://c0de.wtf/88x31new.png"
+                        alt="someone that lives on a mountain" /></a>
+            </section>
+        </div>
+    </div>
+    <script src="js/discord-presence.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/cursor-trail.js"></script>
+    <script>
+        age.textContent = Math.round((new Date() - new Date("Sep 23 2004")) / (100 * 60 * 60 * 24 * 365)) / 10;
+
+        // Highlight active sidebar link based on scroll position
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section.main[id], section.main h2[id]');
+            const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href').substring(1);
+                if (href === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll to section
+        document.querySelectorAll('.sidebar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Initialize Discord Presence Widget
+        // Replace 'YOUR_DISCORD_USER_ID' with your actual Discord user ID
+        new DiscordPresence('277830029399031818', 'discord-presence');
+    </script>
+</body>
+<footer>
+    <hr class="hr3">
+    <p>&copy;2025 nyoemii -- made with love by me :3 </p>
+</footer>
+
+</html>
