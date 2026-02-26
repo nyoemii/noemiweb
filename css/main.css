@@ -1,50 +1,22 @@
-/* ===================================
-   Clean Modern CSS for nyoemii.dev
-   =================================== */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
-/* 
-   FONT OPTIONS - Uncomment the one you like:
-   
-   Option 1: Inter - Modern, clean, professional
-   Option 2: Roboto - Google's classic, very readable
-   Option 3: Poppins - Friendly and modern
-   Option 4: Source Sans Pro - Adobe's clean sans-serif
-   Option 5: Open Sans - Neutral and highly readable
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
-/* Option 1: Inter (CURRENTLY ACTIVE) */
-/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); */
-
-/* Option 2: Roboto */
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); */
-
-/* Option 3: Poppins */
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
-
-/* Option 4: Source Sans Pro */
-/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap'); */
-
-/* Option 5: Open Sans */
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap'); */
-
-/* ===== CSS Variables - DARK MODE ===== */
 :root {
     /* Primary Colors */
-    --primary-color: #60a5fa;
+    --primary-color: #265287;
     --primary-dark: #3b82f6;
     --primary-light: #93c5fd;
 
     /* Background Colors */
-    --bg-color: #1f2937;
-    --bg-secondary: #111827;
-    --bg-tertiary: #374151;
+    --bg-color: #1a0209;
+    --bg-secondary: #111010;
+    --bg-tertiary: #271b24;
 
     /* Text Colors */
-    --text-primary: #f9fafb;
-    --text-secondary: #d1d5db;
-    --text-muted: #9ca3af;
+    --text-primary: #d57ea9;
+    --text-secondary: #d57ea9;
+    --text-muted: #d57ea9;
 
     /* Border Colors */
     --border-color: #374151;
@@ -77,78 +49,54 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    /* Change 'Inter' to your chosen font: 'Roboto', 'Poppins', 'Source Sans Pro', or 'Open Sans' */
-    font-size: 16px;
+    font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 20px;
     line-height: 1.6;
     color: var(--text-primary);
     background-color: var(--bg-color);
     min-height: 100vh;
 }
 
-/* ===== Header & Navigation ===== */
-header {
-    background-color: var(--bg-color);
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: var(--shadow-sm);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.navbar nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 1rem 2rem;
+nav {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    gap: 40px;
+    border-bottom: 2px dotted var(--border-color)
 }
 
-.navbar nav li {
-    display: inline-block;
-}
-
-.navbar nav li a {
-    display: block;
-    color: var(--text-secondary);
+nav a {
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-md);
-    font-weight: 500;
-    transition: all 0.2s ease;
+    font-size: 24px;
+    color: var(--text-primary);
+    padding: 10px;
+    align-items: center;
 }
 
-.navbar nav li a:hover {
-    color: var(--primary-color);
-    background-color: var(--bg-secondary);
+#hrt {
+    border-bottom: 1px dotted var(--border-dark)
 }
 
-.navbar nav li b a {
-    color: var(--primary-color);
-    background-color: var(--bg-secondary);
-    font-weight: 600;
+#age {
+    border-bottom: 1px dotted var(--border-dark)
 }
 
-/* ===== Horizontal Rules ===== */
 .hr1,
 .hr2,
 .hr3,
 hr {
     border: none;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px dotted var(--border-color);
     margin: var(--spacing-md) 0;
 }
 
-/* ===== Content Layout ===== */
 .content {
     padding: 0 2rem;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     gap: 2rem;
@@ -156,68 +104,14 @@ hr {
     padding-top: 2rem;
 }
 
-/* ===== Sidebar ===== */
-.sidebar {
-    width: 250px;
-    flex-shrink: 0;
-    position: sticky;
-    top: 80px;
-    height: fit-content;
-    order: -1;
-}
-
-.sidebar h3 {
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-muted);
-    margin-bottom: var(--spacing-sm);
-    padding-bottom: var(--spacing-xs);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.sidebar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin-bottom: 0.25rem;
-}
-
-.sidebar ul li a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    display: block;
-    padding: 0.5rem 0.75rem;
-    border-radius: var(--radius-md);
-    transition: all 0.2s ease;
-    font-size: 0.9375rem;
-}
-
-.sidebar ul li a:hover {
-    color: var(--primary-color);
-    background-color: var(--bg-secondary);
-}
-
-.sidebar ul li a.active {
-    color: var(--primary-color);
-    background-color: var(--bg-secondary);
-    font-weight: 500;
-}
-
-/* ===== Main Content Wrapper ===== */
 .main-content {
     flex: 1;
     min-width: 0;
 }
 
-/* ===== Title Section ===== */
 .title {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: var(--spacing-lg);
     padding: var(--spacing-md);
     background-color: var(--bg-secondary);
@@ -230,15 +124,11 @@ hr {
     color: var(--text-primary);
 }
 
-.title a:hover {
-    color: var(--primary-color);
-}
-
 .title-img {
     border-radius: 50%;
     margin-right: 0.75rem;
     margin-bottom: -0.5rem;
-    border: 3px solid var(--border-color);
+    border: 3px dotted var(--border-color);
     transition: all 0.2s ease;
 }
 
@@ -258,13 +148,11 @@ hr {
     transform: scale(1.1);
 }
 
-/* ===== Main Sections ===== */
 .main {
     margin-bottom: var(--spacing-lg);
     padding: var(--spacing-md);
     background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-lg);
+    border: 1px dotted var(--border-color);
     box-shadow: var(--shadow-sm);
 }
 
@@ -274,7 +162,7 @@ hr {
     font-weight: 600;
     margin-bottom: var(--spacing-md);
     padding-bottom: var(--spacing-sm);
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 2px dotted var(--border-color);
 }
 
 .main h3 {
@@ -305,56 +193,47 @@ hr {
     color: var(--primary-color);
     text-decoration: none;
     transition: color 0.2s ease;
-}
-
-.main a:hover {
-    color: var(--primary-dark);
-    text-decoration: underline;
+    font-family: "Quicksand";
 }
 
 .no-decor {
     text-decoration: none !important;
 }
 
-/* 88x31 Buttons */
+.project-tech {
+    color: darkslategray;
+    font-size: 18px;
+}
+
 .main img[src*="88x31"],
 .main img[src*=".gif"],
 .main img[src*=".png"][width="88"] {
     margin: 0.25rem;
     border-radius: var(--radius-sm);
-    border: 1px solid var(--border-color);
+    border: 1px dotted var(--border-color);
     transition: all 0.2s ease;
 }
 
-.main img[src*="88x31"]:hover,
-.main img[src*=".gif"]:hover,
-.main img[src*=".png"][width="88"]:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
-/* ===== Code Blocks ===== */
 pre {
     background-color: var(--bg-tertiary) !important;
-    border: 1px solid var(--border-color) !important;
+    border: 1px dotted var(--border-color) !important;
     border-radius: var(--radius-md) !important;
-    padding: 1rem !important;
+    padding: 0.9rem !important;
     margin: var(--spacing-sm) 0 !important;
     overflow-x: auto;
 }
 
 code {
-    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+    font-family: 'Fira Code', 'Monaco', 'Courier New', monospace !important;
     font-size: 0.875rem !important;
     color: var(--text-primary) !important;
 }
 
-/* ===== Footer ===== */
 footer {
     margin-top: var(--spacing-xl);
     padding: var(--spacing-lg) 0;
-    background-color: var(--bg-secondary);
-    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    border-top: 1px dotted var(--border-color);
 }
 
 footer p {
@@ -363,72 +242,13 @@ footer p {
     font-size: 0.875rem;
 }
 
-/* ===== Portfolio Project Grid ===== */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: var(--spacing-md);
-}
-
-.project-box {
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    transition: all 0.2s ease;
-    box-shadow: var(--shadow-sm);
-}
-
-.project-box:hover {
-    box-shadow: var(--shadow-lg);
-    border-color: var(--primary-color);
-    transform: translateY(-4px);
-}
-
-.project-box h3 {
-    color: var(--text-primary);
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-bottom: var(--spacing-sm);
-}
-
-.project-box h3 a {
-    color: var(--text-primary);
-    text-decoration: none;
-}
-
-.project-box h3 a:hover {
-    color: var(--primary-color);
-}
-
-.project-box p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-top: var(--spacing-sm);
-}
-
-.project-box .project-tech {
-    margin-top: var(--spacing-sm);
-    padding-top: var(--spacing-sm);
-    border-top: 1px solid var(--border-color);
-    font-size: 0.875rem;
-    color: var(--text-muted);
-    font-style: italic;
-}
-
-/* ===== Discord Widget ===== */
 .discord-widget {
     background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
+    border: 1px dotted var(--border-color);
     border-radius: var(--radius-lg);
     padding: 1.5rem;
     box-shadow: var(--shadow-sm);
     transition: all 0.2s ease;
-}
-
-.discord-widget:hover {
-    box-shadow: var(--shadow-md);
 }
 
 .discord-header {
@@ -447,7 +267,7 @@ footer p {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 3px solid var(--border-color);
+    border: 3px dotted var(--border-color);
 }
 
 .discord-status-indicator {
@@ -457,10 +277,9 @@ footer p {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    border: 3px solid var(--bg-color);
+    border: 3px dotted var(--bg-color);
 }
 
-/* Status colors */
 .discord-widget[data-status="online"] .discord-status-indicator {
     background-color: var(--accent-color);
 }
@@ -511,20 +330,19 @@ footer p {
     align-items: flex-start;
     padding-top: 1rem;
     margin-top: 1rem;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px dotted var(--border-color);
 }
 
-/* Spotify Activity */
 .spotify-activity {
-    background-color: rgba(30, 215, 96, 0.05);
-    border: 1px solid rgba(30, 215, 96, 0.2);
+    background-color: rgba(0, 0, 0, 0.267);
+    border: rgba(0, 0, 0, 0.267);
     border-radius: var(--radius-md);
     padding: 0.75rem;
 }
 
 .spotify-album-art {
-    width: 65px;
-    height: 65px;
+    width: 75px;
+    height: 75px;
     border-radius: var(--radius-sm);
     flex-shrink: 0;
 }
@@ -533,17 +351,16 @@ footer p {
     color: #1db954;
 }
 
-/* Game Activity */
 .game-activity {
     background-color: rgba(88, 101, 242, 0.05);
-    border: 1px solid rgba(88, 101, 242, 0.2);
+    border: 1px dotted rgba(88, 101, 242, 0.2);
     border-radius: var(--radius-md);
     padding: 0.75rem;
 }
 
 .activity-image {
-    width: 65px;
-    height: 65px;
+    width: 75px;
+    height: 75px;
     border-radius: var(--radius-sm);
     flex-shrink: 0;
 }
@@ -596,7 +413,6 @@ footer p {
     padding: 2rem 1rem;
 }
 
-/* ===== Scrollbar ===== */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -613,56 +429,4 @@ footer p {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--text-muted);
-}
-
-/* ===== Responsive Design ===== */
-@media (max-width: 768px) {
-    .navbar nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 0.75rem 1rem;
-    }
-
-    .content {
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    .sidebar {
-        position: relative;
-        width: 100%;
-        top: 0;
-        margin-bottom: var(--spacing-md);
-    }
-
-    .title {
-        font-size: 1.5rem;
-        padding: 1rem;
-    }
-
-    .main {
-        padding: 1rem;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    .title {
-        font-size: 1.25rem;
-    }
-
-    .main h2 {
-        font-size: 1.25rem;
-    }
-
-    .navbar nav ul {
-        padding: 0.5rem;
-    }
 }

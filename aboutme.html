@@ -10,42 +10,36 @@
     <meta content="https://nyoemii.dev" property="og:url">
     <meta content="https://nyoemii.dev/media/img/pfp.jpg" property="og:image">
     <meta content="#4db9a7" data-react-helmet="true" name="theme-color">
-    <title>nyoemii = it/its</title>
+    <title>nyoemii = she/they</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/prism.css">
 </head>
 <header>
-    <section class="navbar">
-        <nav>
-            <ul>
-                <li><a href="index.html">main</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
-                <li><b><a href="aboutme.html">about me</a></b></li>
-            </ul>
-        </nav>
-    </section>
-    <hr class="hr1">
+    <nav><a href="./index.html">main</a> <a href="./portfolio.html">projects</a> <a href="./aboutme.html">about</a></nav>
 </header>
-
 <body>
     <div class="content">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <h3>Entries</h3>
-            <ul>
-                <li><a href="#1st-entry">1st Entry</a></li>
-                <li><a href="#about-me">About Myself</a></li>
-            </ul>
-        </aside>
-
-        <!-- Main Content -->
         <div class="main-content">
             <section class="title">
-                <h1><a href="aboutme.html">> about me</a></h1>
+                <h1><a>about me</a></h1>
             </section>
             <hr class="hr2">
+            <section class="main" id="2nd-entry-i-think">
+                <h2><a class="no-decor">26.02.2026 - 12:44am</a></h2>
+                <p>
+                    yeah, it's been some months since i've last written anything on here. but eh, whatever<br>
+                    i've recently went empty on my antidepressants, and my emotional stability has been going
+                    DOWN. i cried over so many useless things that i usually dont cry about.<br>
+                    i finally somewhat had the motivation to update my css again<br>
+                    there's not really anything else i can say about today, except that i've been listening
+                    to sad songs to keep me somewhat sane.<br>
+                    i just wish i had irl friends at all honestly. i hate being stuck at home because of no friends.<br>
+                    <br>
+                    until next time
+                </p>
+            </section>
             <section class="main" id="1st-entry">
-                <h2><a class="no-decor" href="aboutme.html#1st-entry"># 1st entry - 23.09.2025</a></h2>
+                <h2><a class="no-decor">1st entry - 23.09.2025</a></h2>
                 <p>
                     soo.. today was my birthday. it was definitely really fun, but it sadly turned depressive at the
                     middle of the day. <br>
@@ -64,7 +58,7 @@
                 </p>
             </section>
             <section class="main" id="about-me">
-                <h2><a class="no-decor" href="aboutme.html#about-me"># about myself & why i behave like i do</a></h2>
+                <h2><a class="no-decor">about myself & why i behave like i do</a></h2>
                 <p>
                     my name is Noemi. i've been born on the 23rd of September in 2004. i never really thought about
                     writing something on this silly website <br>
@@ -108,46 +102,9 @@
             </section>
         </div>
     </div>
-    <script src="js/cursor-trail.js"></script>
-    <script>
-        // Highlight active sidebar link based on scroll position
-        window.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('section.main[id], section.main h2[id]');
-            const sidebarLinks = document.querySelectorAll('.sidebar a');
-
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 150) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            sidebarLinks.forEach(link => {
-                link.classList.remove('active');
-                const href = link.getAttribute('href').substring(1);
-                if (href === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Smooth scroll to section
-        document.querySelectorAll('.sidebar a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
 </body>
 <footer>
-    <hr class="hr3">
-    <p>&copy;2025 nyoemii -- made with love by me :3 </p>
+    <p>&copy;2026 nyoemii -- made with love by me :3 </p>
 </footer>
 
 </html>
