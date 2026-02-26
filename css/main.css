@@ -45,7 +45,6 @@
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7);
 }
 
-/* ===== Global Reset & Base Styles ===== */
 * {
     margin: 0;
     padding: 0;
@@ -128,7 +127,7 @@ hr {
     border-radius: 50%;
     margin-right: 0.75rem;
     margin-bottom: -0.5rem;
-    border: 3px dotted var(--border-color);
+    border: 3px solid var(--border-color);
     transition: all 0.2s ease;
 }
 
@@ -240,177 +239,6 @@ footer p {
     text-align: center;
     color: var(--text-secondary);
     font-size: 0.875rem;
-}
-
-.discord-widget {
-    background-color: var(--bg-color);
-    border: 1px dotted var(--border-color);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.2s ease;
-}
-
-.discord-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.discord-avatar-container {
-    position: relative;
-    flex-shrink: 0;
-}
-
-.discord-avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 3px dotted var(--border-color);
-}
-
-.discord-status-indicator {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 3px dotted var(--bg-color);
-}
-
-.discord-widget[data-status="online"] .discord-status-indicator {
-    background-color: var(--accent-color);
-}
-
-.discord-widget[data-status="idle"] .discord-status-indicator {
-    background-color: var(--warning-color);
-}
-
-.discord-widget[data-status="dnd"] .discord-status-indicator {
-    background-color: var(--error-color);
-}
-
-.discord-widget[data-status="offline"] .discord-status-indicator {
-    background-color: var(--text-muted);
-}
-
-.discord-user {
-    flex: 1;
-    min-width: 0;
-}
-
-.discord-username {
-    color: var(--text-primary);
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-}
-
-.discord-discriminator {
-    color: var(--text-muted);
-    font-size: 0.875rem;
-    margin-bottom: 0.25rem;
-}
-
-.discord-status-text {
-    color: var(--text-secondary);
-    font-size: 0.75rem;
-    text-transform: capitalize;
-    padding: 0.25rem 0.5rem;
-    background-color: var(--bg-secondary);
-    border-radius: var(--radius-sm);
-    display: inline-block;
-}
-
-.discord-activity {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    padding-top: 1rem;
-    margin-top: 1rem;
-    border-top: 1px dotted var(--border-color);
-}
-
-.spotify-activity {
-    background-color: rgba(0, 0, 0, 0.267);
-    border: rgba(0, 0, 0, 0.267);
-    border-radius: var(--radius-md);
-    padding: 0.75rem;
-}
-
-.spotify-album-art {
-    width: 75px;
-    height: 75px;
-    border-radius: var(--radius-sm);
-    flex-shrink: 0;
-}
-
-.spotify-icon {
-    color: #1db954;
-}
-
-.game-activity {
-    background-color: rgba(88, 101, 242, 0.05);
-    border: 1px dotted rgba(88, 101, 242, 0.2);
-    border-radius: var(--radius-md);
-    padding: 0.75rem;
-}
-
-.activity-image {
-    width: 75px;
-    height: 75px;
-    border-radius: var(--radius-sm);
-    flex-shrink: 0;
-}
-
-.game-icon {
-    color: #5865f2;
-}
-
-.activity-details {
-    flex: 1;
-    min-width: 0;
-}
-
-.activity-label {
-    color: var(--text-muted);
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.25rem;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-}
-
-.activity-name {
-    color: var(--text-primary);
-    font-size: 0.9375rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-}
-
-.activity-state {
-    color: var(--text-secondary);
-    font-size: 0.875rem;
-    margin-bottom: 0.25rem;
-}
-
-.activity-time {
-    color: var(--text-muted);
-    font-size: 0.75rem;
-    margin-top: 0.25rem;
-    font-style: italic;
-}
-
-.discord-error {
-    color: var(--text-secondary);
-    font-size: 0.875rem;
-    text-align: center;
-    padding: 2rem 1rem;
 }
 
 ::-webkit-scrollbar {
